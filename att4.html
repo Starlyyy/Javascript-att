@@ -32,13 +32,13 @@
 <body>
 
     <p>0</p>
-    <button onclick="alterarCont(0)">!Clique aqui!</button>
+    <button>!Clique aqui!</button>
 
     <script>
 
         let contador = 0
 
-        const botao = document.querySelector('button').addEventListener('click', ()=>{
+        const botao = document.querySelector('button').addEventListener('click', function (){
             contador++
             document.querySelector('p').innerText = contador
 
