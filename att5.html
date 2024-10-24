@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <h2>Clique no botao abaixo e adicione um item à sua lista! ↓✎</h2>
+
+    <button>Botãoooo</button>
+
+    <ol>
+        <li>blablabla</li>
+    </ol>
+
+    <script>
+
+        let list = document.querySelector('ol');
+        let botao = document.querySelector('button');
+        let contador = 0;
+
+        botao.addEventListener('click', function (){
+            let novoItem = document.createElement("li");
+            novoItem.textContent = "oi " + contador++;
+            list.appendChild(novoItem);
+        });
+
+    </script>
+
+</body>
+</html>
