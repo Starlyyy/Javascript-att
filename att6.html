@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乂☠</title>
+
+    <style>
+
+        /* body {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+
+        body p {
+            float: right;
+        } vou arrumar isso em casa*/
+
+    </style>
+</head>
+<body>
+
+    <h1>Gerador de Nomes de Aventuras</h1>
+
+    <button>Gerar Nome:</button>
+    <p>oiiiiiiiii</p>
+    
+
+    <script>
+
+        const titles = ["Sr.", "Mestre", "Dom", "Lorde", "Lady", "Capitão", "Dama"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis"];
+
+        document.querySelector('button').addEventListener('click', function (){
+            let titulo = titles[Math.floor(Math.random() * titles.length)]
+            let nome = names[Math.floor(Math.random() * names.length)]
+            let classe = classes[Math.floor(Math.random() * classes.length)]
+            let local = locations[Math.floor(Math.random() * locations.length)]
+
+            document.querySelector('p').innerText = titulo+ " "+nome+", o "+classe+ " de "+local+"."
+        })
+
+    </script>
+    
+</body>
+</html>
