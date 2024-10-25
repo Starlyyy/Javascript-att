@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        input {
+            width: 400px;
+            outline: none;
+        }
+
+        .erro{
+            display: none; /*nao carrega*/
+            /* visibility: hidden; carrega mas nao mostra*/
+            color: tomato;
+        }
+
+        .grupo {
+            padding: 12px;
+        }
+
+        .invalido {
+            border: solid 2px tomato;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <form>
+
+        <div class="grupo">
+            <input type="text" placeholder="Informe seu nome">
+            <span class="erro">O nome deve ter pelo menos três caracteres</span>
+        </div>
+        
+        <div class="grupo">
+            <input type="email" placeholder="Informe seu email">
+            <span class="erro">O email precisa ser válido!</span>
+        </div>
+        
+        <div class="grupo">
+            <input type="password" placeholder="Informe sua senha">
+            <span class="erro">A senha precisa ter oito caracteres</span>
+        </div>
+        
+        <div class="grupo">
+            <input type="password" placeholder="Confirme sua senha">
+            <span class="erro">A confirmação nao corresponde à senha!</span>
+        </div>
+        
+        <div class="grupo">
+            <input type="submit">
+        </div>
+
+    </form>
+
+    <script>
+
+        const inputs = document.querySelectorAll('input')
+        const erros = document.querySelectorAll('.erro')
+
+        function validaNome(){
+            if(inputs[0].value.length <= 3 ){    /*value é o q digitou e o length é o tamanho*/
+                console.log("digitou")
+                erros[0].style.display = 'block'
+                inputs[0].classList.add('invalido')
+            } else {
+                erros[0].style.display = 'none'
+                inputs[0].classList.remove('invalido')
+            }
+        }
+
+        // inputs[0].addEventListener('input', validaNome)
+
+        // function validaEmail(){
+        //     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        // }
+
+    </script>
+
+</body>
+</html>
