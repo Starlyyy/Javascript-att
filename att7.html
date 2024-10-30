@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <img src="https://pm1.aminoapps.com/6447/4ebe4551d53d2d0f552bce3e3bc9e46d95c45379_00.jpg" alt="">
+
+    <p></p>
+    
+    <script>
+        document.querySelector('img').addEventListener('mouseenter', ()=>{
+            let texto = document.querySelector('p')
+            texto.textContent = "Ei cara, nao confie em ninguem.."
+        })
+        
+        document.querySelector('img').addEventListener('mouseleave', ()=>{
+            let texto = document.querySelector('p')
+            texto.textContent = "Mas voce pode confiar em mim!!"
+        })
+        
+        document.querySelector('img').addEventListener('click', ()=>{
+            
+            document.querySelector('img').setAttribute("src", "https://pm1.aminoapps.com/6138/4462d4ecddde11da3d7df13cb1950c77cdd3da22_00.jpg")
+            document.querySelector('p').textContent = "Ok.. voce me pegou.." 
+
+            document.querySelector('img').addEventListener('mouseenter', ()=>{
+            document.querySelector('p').textContent = "nao foi dessa fez haha >:D"   
+            })      
+
+            document.querySelector('img').addEventListener('mouseleave', ()=>{
+            document.querySelector('p').textContent = "MAS EU POSSO TE DAR O QUE VOCE QUISER"   
+            })
+            
+            console.log('oiii') 
+            
+        })
+    </script>
+</body>
+</html>
