@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvete</title>
+    <style>
+        p {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .modoEscuro {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Digite um sabor de sorvete:</h2>
+    <input type="text" placeholder="Digite aqui..">
+    <p></p>
+    <button>Mudar modo</button>
+
+    <script>
+
+        document.querySelector('input').addEventListener('input', ()=>{
+            const input = document.querySelector('input').value.toLowerCase()
+            const p = document.querySelector('p')
+
+            if (input.length > 3) {
+
+                if (input.includes("chocolate")) {
+                    p.textContent = "Eu amo sorvete de chocolate!!"
+                } else if (input.includes("flocos")){
+                    p.textContent = "Ahh, mas chocolate e o meu favorito..."
+                } else {
+                    p.textContent = "Ahh, eu esperava um sabor de sorvete..."
+                }
+                
+            } else {
+                p.textContent = "Cade o sabor...?"
+            }
+        })
+
+        document.querySelector('button').addEventListener('click', ()=>{
+            document.body.classList.toggle("modoEscuro")
+        })
+
+    </script>
+
+</body>
+</html>
